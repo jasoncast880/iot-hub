@@ -1,3 +1,4 @@
+//index.js VueX STORE
 import { createStore } from 'vuex'
 
 export default createStore({
@@ -8,6 +9,8 @@ export default createStore({
   mutations: {
   },
   actions: {
+  },
+  getters: {
   },
   modules: {
   }

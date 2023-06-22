@@ -1,11 +1,22 @@
+//index.js for VUE ROUTER
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-
+import LiveStreamView from '../views/LiveStreamView.vue'
 const routes = [
   {
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/doc-rsrc',
+    name: 'docs',
+    component: HomeView
+  },
+  {
+    path: '/camera-test',
+    name: 'camera-test',
+    component: LiveStreamView
   },
   {
     path: '/about',
