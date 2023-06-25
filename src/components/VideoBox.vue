@@ -1,8 +1,9 @@
 <template>
-    <p>Your WebCam Here</p>
-    <body>
-        <video id="webcamVideo" autoplay playsinline></video>
-    </body>
+    <div >
+        <body>
+            <video id="webcamVideo" autoplay playsinline></video>
+        </body>
+    </div>
 </template>
 
 <script>
@@ -29,10 +30,10 @@ export default{
     
 <style scoped>
 #webcamVideo{
-      height: auto;
+      height: 250px;
       width: 350px;
-      border-width: 10px;
-      border-color:black;
-      background:grey;
+      /* background-color: lightgray;
+      border: 5px solid lightgray; */
     }
+
 </style>

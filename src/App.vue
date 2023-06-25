@@ -25,6 +25,7 @@
 
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 body {
   font-family: 'Poppins', sans-serif;
@@ -33,11 +34,12 @@ body {
 }
 
 .container{
-  position:absolute;
+  /* position:absolute;
   top:0;
   bottom:0;
   left:0;
-  right:0;
+  right:0; */
+  min-height: 100vh;
 }
 
 #app {
@@ -86,5 +88,13 @@ nav a.router-link-exact-active {
   display:flex;
   flex-direction: column;
   height: 100vh;
+}
+
+.circle-border{
+  display:inline-block;
+  border-radius:50%;
+  /* border: 0.5px solid black; */
+  padding: 5px;
+  background: lightgray/*#e6e8e6;*/;
 }
 </style>
