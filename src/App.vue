@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-      <div id="header-id"><Header/></div>
+      <div class="header-id"><Header/></div>
       <div class="router-container">
         <router-view/>
       </div>
@@ -40,6 +40,7 @@ body {
   left:0;
   right:0; */
   min-height: 100vh;
+  width:100%;
 }
 
 #app {
@@ -79,7 +80,9 @@ nav a.router-link-exact-active {
   margin: 10px;
   font-size: 14px;
 }
-
+.header-id{
+  width: 100%;
+}
 #footer-id{
   margin-top:auto;
 }

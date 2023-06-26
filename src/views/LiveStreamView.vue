@@ -81,7 +81,7 @@
         margin-top: 0;
     }
     .padding-box{
-      margin-top: 15%;
+      margin-top: 10%;
       margin-left: auto;
       margin-right: auto;
     }
