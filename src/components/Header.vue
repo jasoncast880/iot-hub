@@ -50,21 +50,21 @@ export default {
   display: flex;
   background: #5c9173;
   color: white;
-  position: static;
+  position: absolute;
   width: 100%;
-  margin: 0;
-  height: 120px;
+  margin-bottom: 15vh;
+  height: 100px;
 
   justify-content: space-between;
 }
 .icon-container {
   height: auto;
-  width: 80px;
+  width: 66px;
   margin: 20px;
 }
 .icon-box{
   display: flex;
-  width:400px;
+  align-items: center;
 }
 .header-text-container {
   margin-left: 0px;
@@ -81,8 +81,7 @@ export default {
 
 .right-align-box {
   display: flex;
-  width: 200px;
   align-items:center;
-  margin-right:20px;
+  margin-right: 2%;
 }
 </style>

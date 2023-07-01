@@ -2,11 +2,13 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LiveStreamView from '../views/LiveStreamView.vue'
+import LoginForm from '../views/LoginForm.vue'
+import store from '../store'
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: LoginForm
   },
   {
     path: '/doc-rsrc',
@@ -16,7 +18,16 @@ const routes = [
   {
     path: '/camera-test',
     name: 'camera-test',
-    component: LiveStreamView
+    component: () => import('../views/LiveStreamView.vue'),
+    beforeEnter(to,from,next) {
+      if(store.state.allowAccess === true) {
+        console.log("ALLOW ACCESS");
+        next();
+      } else {
+        next({name:"EnterCode"});
+        alert("Please enter the secret code");
+      }
+    },
   },
   {
     path: '/about',
@@ -29,7 +40,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHashHistory(), 
   routes
 })
 

@@ -1,6 +1,6 @@
+<!-- note: NOT CURRENTLY IN PRODUCTION!!! add in later to increase functionality -->
 <template>
     <div style="display: flex; flex-direction:row;">
-        <span class="material-symbols-outlined"><div class="circle-border">menu</div></span>
         <div class="padding-box">
             
             <div class="vertical-container">
@@ -29,7 +29,7 @@
                         And all that you slight
                         And everyone you fight
                         And all that is now
-                        And all that is gone
+                        And all that is gone  SEE NOTE AT TOP OF CODE SECTION
                         And all that's to come
                         And everything under the sun is in tune
                         But the sun is eclipsed by the moon -->

@@ -89,8 +89,9 @@ nav a.router-link-exact-active {
 
 .router-container{
   display:flex;
+  margin-top: 15vh;
   flex-direction: column;
-  height: 100vh;
+  height: 83vh;
 }
 
 .circle-border{
