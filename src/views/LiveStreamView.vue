@@ -1,6 +1,6 @@
 <template>
     <div style="display: flex; flex-direction:row;">
-        <span class="material-symbols-outlined"><div class="circle-border">menu</div></span>
+        <!-- <span class="material-symbols-outlined"><div class="circle-border">menu</div></span> -->
         <div class="padding-box">
             
             <div class="vertical-container">
