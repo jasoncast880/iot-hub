@@ -2,7 +2,7 @@
   <div id= "footer-id" class="footer-flex-container">
     <div><router-link to="/about">About Us</router-link></div>
     <div><router-link to="/doc-rsrc">Documentation</router-link></div>
-    <div><router-link to="/camera-test">test1</router-link></div>
+    <div><router-link to="/livestream">test1</router-link></div>
   </div>
 </template>
 <style scoped>

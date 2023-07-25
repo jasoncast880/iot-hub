@@ -16,14 +16,15 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/camera-test',
-    name: 'camera-test',
-    component: () => import('../views/LiveStreamView.vue'),
+    path: '/livestream-test',
+    name: 'livestream',
+    component: () => import(LiveStreamView),
     beforeEnter(to,from,next) {
       if(store.state.allowAccess === true) {
         console.log("ALLOW ACCESS");
         next();
       } else {
+        console.log("WRONG");
         next({name:"EnterCode"});
         alert("Please enter the secret code");
       }
@@ -36,12 +37,12 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+  },
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(), 
+  history: createWebHashHistory(process.env.Base_URL), 
   routes
 })
 
-export default router
+export default router;

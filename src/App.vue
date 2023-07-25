@@ -4,9 +4,9 @@
       <div class="router-container">
         <router-view/>
       </div>
-      <div>
+      <!-- <div>
           <Footer/>
-      </div>
+      </div> -->
   </div>
 </template>
 

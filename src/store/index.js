@@ -11,15 +11,15 @@ const store = createStore({
   },
   getters: {
   },
-  mutations: {
-    verifyCode(state, status) {
-      state.allowAccess = status;
-    }
-  },
   actions: {
     verifyCode({commit}, status) {
       commit("verifyCode",status);
     },
+  },
+  mutations: {
+    verifyCode(state, status) {
+      state.allowAccess = status;
+    }
   },
   getters: {
   },

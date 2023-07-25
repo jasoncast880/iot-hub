@@ -26,19 +26,30 @@ import { useRouter } from "vue-router";
 
         let code = ref("");
         function submitCode() {
-        if (code.value === "<@:)") {
-            store.dispatch("verifyCode", true);
-        } else {
-            store.dispatch("verifyCode", false);
-        }
-        // Navigate if correct code, alert if not correct
-        if (store.state.allowAccess) {
-            router.push({ name: "camera-test" });
-        } else {
-            alert("Incorrect code");
-        }
-        code.value = "";
-        }
+            const requestOptions = {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ code: code }),
+            };
+            fetch("http://localhost:8080/secret-code", requestOptions)
+                .then((response) => response.json())
+                .then((data) => {
+                if (data === "Correct code") {
+                    store.dispatch("verifyCode", true);
+                } else {
+                    store.dispatch("verifyCode", false);
+                }
+                })
+                .then(() => {
+                if (store.state.allowAccess) {
+                    router.push({ name: "livestream" });
+                } else {
+                    alert("Incorrect code");
+                }
+                });
+                
+            code.value = "";
+          }
 
         return { code, submitCode };
      },
